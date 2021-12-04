@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@metaplex/js": "^4.7.0",
+    "@mui/lab": "^5.0.0-alpha.58",
     "@mui/material": "latest",
     "@mui/styled-engine-sc": "latest",
     "@project-serum/anchor": "^0.18.2",

@@ -1,5 +1,6 @@
 const withTM = require("next-transpile-modules")([
   "@mui/material",
+  "@mui/lab",
   "@mui/system",
   "@blocto/sdk",
   "@project-serum/sol-wallet-adapter",
@@ -28,6 +29,14 @@ module.exports = withTM({
       ...config.resolve.alias,
       "@mui/styled-engine": "@mui/styled-engine-sc",
     };
+
+    config.resolve.fallback = {
+      fs: false,
+      os: false,
+      path: false,
+      crypto: false,
+    };
+
     return config;
   },
 });

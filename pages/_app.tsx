@@ -6,6 +6,8 @@ import Head from "next/head";
 import theme from "../src/theme";
 
 import dynamic from "next/dynamic";
+import { Toaster } from "react-hot-toast";
+import { WalletBalanceProvider } from "../hooks/useWalletBalance";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
 
@@ -29,9 +31,12 @@ export default function MyApp(props: AppProps) {
         />
       </Head>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
         <WalletConnectionProvider>
-          <Component {...pageProps} />
+          <WalletBalanceProvider>
+            <Toaster />
+            <CssBaseline />
+            <Component {...pageProps} />
+          </WalletBalanceProvider>
         </WalletConnectionProvider>
       </ThemeProvider>
     </React.Fragment>
