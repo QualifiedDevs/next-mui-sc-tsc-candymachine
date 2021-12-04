@@ -1,6 +1,10 @@
 import * as React from "react";
 import { Container } from "@mui/material";
 
+import {WalletModalButton} from "@solana/wallet-adapter-react-ui"
+
 export default function Index() {
-  return <Container></Container>;
+  return <Container>
+    <WalletModalButton />
+  </Container>;
 }
