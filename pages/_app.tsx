@@ -33,7 +33,7 @@ export default function MyApp(props: AppProps) {
       <ThemeProvider theme={theme}>
         <WalletConnectionProvider>
           <WalletBalanceProvider>
-            <Toaster />
+            <Toaster position="bottom-center" />
             <CssBaseline />
             <Component {...pageProps} />
           </WalletBalanceProvider>

@@ -18,9 +18,7 @@ const MintButton = styled((props) => {
   } = useCandyMachine();
 
   return (
-    <LoadingButton variant="contained" onClick={startMint} disabled={!connected || isMinting} loading={isMinting} {...props}>
-      Mint
-    </LoadingButton>
+    <LoadingButton variant="contained" onClick={startMint} disabled={!connected || isMinting || isSoldOut} loading={isMinting} {...props} />
   );
 })``;
 
